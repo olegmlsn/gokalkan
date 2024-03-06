@@ -10,8 +10,8 @@ import (
 
 // Kalkan - это обертка над методами KalkanCrypt.
 type Kalkan interface {
-	LoadKeyStore(path, password string) (err error)
-	LoadKeyStoreFromBytes(key []byte, password string) (err error)
+	LoadKeyStore(path, password string, alias string) (err error)
+	LoadKeyStoreFromBytes(key []byte, password string, alias string) (err error)
 
 	Sign(data []byte, isDetached, withTSP bool) (signature []byte, err error)
 	SignXML(xml string) (signedXML string, err error)
