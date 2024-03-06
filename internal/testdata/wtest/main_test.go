@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gokalkan/gokalkan"
+	"github.com/olegmlsn/gokalkan"
 
-	"github.com/gokalkan/gokalkan/internal/testdata/wtest/certs"
+	"github.com/olegmlsn/gokalkan/internal/testdata/wtest/certs"
 )
 
 //nolint:gochecknoglobals
@@ -28,7 +28,7 @@ func TestMain(m *testing.M) {
 		os.Exit(1)
 	}
 
-	err = cli.LoadKeyStoreFromBytes(key.Key, key.Password)
+	err = cli.LoadKeyStoreFromBytes(key.Key, key.Password, key.Alias)
 	if err != nil {
 		fmt.Println("load key store error", err)
 		os.Exit(1)

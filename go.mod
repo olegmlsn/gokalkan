@@ -1,3 +1,3 @@
-module github.com/gokalkan/gokalkan
+module github.com/olegmlsn/gokalkan
 
-go 1.18
+go 1.22.0
